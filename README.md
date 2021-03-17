@@ -1,4 +1,4 @@
-# DailyCodingProblem
+# Daily_Coding_Problem
 My solutions to the free problems from https://www.dailycodingproblem.com/ written in Python.
 
 ### Problem 1: Solved
