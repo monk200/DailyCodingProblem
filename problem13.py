@@ -12,12 +12,11 @@ def substringLength(k, s):
 
     while end <= len(s):
         curr = list(s[start:end])
-        print(curr)
-        print(s[end:end+1], " ", numUnique)
         if s[end:end+1] not in curr:     # new unique char
             if numUnique+1 > k:     # scoot curr to the right
                 start += 1
-                numUnique -= 1
+                if curr.count(curr[0]) == 1:
+                    numUnique -= 1
             else:       # expand curr to this char
                 end += 1
                 numUnique += 1
@@ -29,6 +28,6 @@ def substringLength(k, s):
     return longest
 
 
-print(substringLength(4, "jkhkuioiu"))
 assert substringLength(2, "abcba") == 3, "Should be 3"      # checks the given case
+assert substringLength(4, "jkhkuioiu") == 6, "Should be 6"
 
